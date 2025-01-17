@@ -27,11 +27,11 @@ def settings_browser(request):
 def test_github_desktop(settings_browser):
     if settings_browser == 'mobile':
         pytest.skip(reason='Разрешение экрана для мобильной версии')
-        browser.open('/')
+    browser.open('/')
 
-        browser.element(by.text("Sign up")).click()
+    browser.element(by.text("Sign up")).click()
 
-        browser.element('#login').should(be.visible)
+    browser.element('#login').should(be.visible)
 
 
 def test_github_mobile_only_hd(settings_browser):
